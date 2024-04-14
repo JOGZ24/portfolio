@@ -1,0 +1,16 @@
+{
+	"/": [],
+	"/competences": [
+		"src/routes/competences/+page.server.js"
+	],
+	"/contact": [],
+	"/formations": [
+		"src/routes/formations/+page.server.js"
+	],
+	"/projects": [
+		"src/routes/projects/+page.server.js"
+	],
+	"/projects/[slug]": [
+		"src/routes/projects/[slug]/+page.server.js"
+	]
+}
