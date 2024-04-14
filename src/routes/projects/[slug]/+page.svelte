@@ -17,16 +17,16 @@
       </div>
       <p>{projet.description2}</p>
       <div>
-        <h2>Compétences experimentées :</h2>
-        <h3><u>Lien vers le projet</u></h3>
+        <h2><u>Compétences éprouvées : </u>{projet.competences}</h2>
+        <h3><u><a href=" {projet.lien}">Lien vers le projet </a></u></h3>
       </div>
     {/if}
   {/each}
 </div>
 
 <style>
-  svg {
-    fill: white;
+  a {
+    color: white;
   }
   .img {
     display: grid;

@@ -20,7 +20,7 @@
 </script>
 
 <body>
-  <div style="background-image: url({image});">
+  <div class="background-overlay" style="background-image: url({image});">
     <h1>{nom}</h1>
     <p>{description}</p>
     <a href="/projects/{id}"> En savoir plus </a>
@@ -28,6 +28,28 @@
 </body>
 
 <style>
+  .background-overlay {
+    position: relative;
+  }
+
+  .background-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); /* Couleur semi-transparente (noir avec une opacité de 0.5) */
+  }
+
+  .background-overlay:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
   :global(body) {
     background-color: black;
     color: white;
@@ -38,9 +60,6 @@
     color: black;
   }
 
-  div:hover {
-    opacity: 0.8;
-  }
   div {
     position: relative;
     border: 2px solid #353232;
@@ -59,7 +78,8 @@
     font-size: 1.5em;
   }
 
-  a {
+  a,
+  p {
     font-size: 0.5em;
     color: white;
     opacity: 0.8;

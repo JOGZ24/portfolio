@@ -17,6 +17,18 @@
     { id: 3, label: "Coordonnées", description: "" },
     { id: 4, label: "CV", description: "" },
   ];
+
+  let cvUrl = "CV_BOUIN_Julien.pdf";
+
+  function telechargerCV() {
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "cv-bouin-julien.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +50,12 @@
           Vous trouverez ci-joint un boutton qui mène directement via le
           téléchargement de mon cv .
         </p>
-        <button><a href={item.url}>URL</a></button>
+        <button
+          ><a
+            href="https://drive.google.com/file/d/1-r2nA06xXw3L7m3uf4yHnuF5Tn-hBIEu/view?usp=drive_link"
+            >Voir le CV</a
+          ></button
+        >
       {:else if item.id == 3}
         <p>
           Contactez-moi directement via les informations ci-dessous. Que ce soit

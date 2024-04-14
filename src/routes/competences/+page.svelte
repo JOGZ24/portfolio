@@ -65,4 +65,11 @@
     margin-bottom: 20px;
     color: white;
   }
+  @media (max-width: 768px) {
+    .skills {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 </style>

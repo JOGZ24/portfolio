@@ -84,4 +84,11 @@
     justify-content: space-between;
     width: 17%;
   }
+  @media (max-width: 768px) {
+    div {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 </style>
