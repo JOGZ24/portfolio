@@ -3,6 +3,12 @@
   function toggleMenuRight() {
     visible = !visible;
   }
+
+  let showMenu = false;
+
+function changeShowMenu(){
+    showMenu=!showMenu;
+}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,9 +96,43 @@
       </div>
     </nav>
   </div>
+  <div class="shortHeader">
+    <nav>
+      <ul>
+        <li><a href="" class="homeshort" on:click={changeShowMenu}><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg></a></li>
+      
+            {#if showMenu}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/competences">Compétences</a></li>
+                    <li><a href="/projects">Projets</a></li>
+                    <li><a href="/formations">Formation</a></li>
+                    <li><a href="/contact">Contact</a></li>
+
+                </ul>
+            {/if}
+     
+    </ul>
+    </nav>
+  </div>
 </body>
 
 <style>
+  .shortHeader{
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .header{
+        display: none;
+    }
+
+    .shortHeader{
+        display: block;
+        opacity: 0.7;
+        font-size: 23px;
+        background-color: #111;
+    }
+  }
   :global(body) {
     background-color: black;
     color: white;
@@ -105,7 +145,20 @@
   svg {
     fill: white;
   }
+  li{
+    list-style-type: none;
+  }
   .header {
+    border-bottom: 1px solid #f0dede;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+  }
+
+  .shortHeader{
     border-bottom: 1px solid #f0dede;
     width: 100%;
     font-family: "Inter", sans-serif;

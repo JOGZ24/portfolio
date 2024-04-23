@@ -35,4 +35,10 @@
   .thumbnail {
     margin-right: 10%;
   }
+  @media (max-width: 768px) {
+    .container{
+      display: flex;
+     flex-direction: column;
+    }
+  }
 </style>

@@ -46,7 +46,7 @@
 
   p {
     font-size: 0.5em;
-    margin-top: -10%;
+    margin-top: 3%;
   }
 
   h1 {
